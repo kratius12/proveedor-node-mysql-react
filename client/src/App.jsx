@@ -1,24 +1,24 @@
-import {Route,Routes} from 'react-router-dom'
-import ProveedoresPage from './pages/ProveedoresPage'
-import FormTemplate from './pages/FormTemplate'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import { ProveedorContextProvider } from './context/ProveedorProvider'
-
-function App(){
-  return(
-    <div>
+import { Route, Routes } from "react-router-dom";
+import EmpleadosPage from "./pages/ProveedoresPage";
+import EmpleadosForm from "./pages/ProveedoresForm";
+import Header from "./components/Header";
+import { EmpleadoContextProvider } from "./context/ProveedoresProvider";
+function App() {
+  return (
+    <div className="">
       <Header/>
-      <Navbar/>
-      <div className='container mx-auto py-4 px20'>
-        <ProveedorContextProvider>
+      {/* <Navbar /> */}
+      <div className="container mx-auto py-4 px20">
+        <EmpleadoContextProvider>
           <Routes>
-            <Route path='/provs' element={<ProveedoresPage/>} />
-            <Route path='/newProv' element={<FormTemplate/>} />
+            <Route path="/proveedor" element={<EmpleadosPage/>} />
+            <Route path="/agregarProveedor" element={<EmpleadosForm/>} />
+            <Route path="/editarProveedor/:id" element={<EmpleadosForm/>} />
           </Routes>
-        </ProveedorContextProvider>
+        </EmpleadoContextProvider>
       </div>
     </div>
   )
 }
+
 export default App

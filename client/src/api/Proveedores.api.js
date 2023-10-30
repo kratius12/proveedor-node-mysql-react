@@ -1,21 +1,25 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const GetProveedoresRequest = async()=>{
+export const GetEmpleadosRequest = async () =>{
     return await axios.get('http://localhost:4000/provs')
 }
 
-export const GetProveedorRequest = async(idProv)=>{
-    return await axios.get(`http://localhost:4000/prov/${idProv}`)
+export const CreateEmpleadoRequest = async (empleado) => {
+    return await axios.post('http://localhost:4000/prov', empleado)
 }
 
-export const CreateProveedorRequest = async(proveedor)=>{
-    return await axios.post('http://localhost:4000/prov', proveedor)
+export const DeleteEmpleadoRequest = async (idEmp) =>{
+    return await axios.delete(`http://localhost:4000/prov/${idEmp}`)
 }
 
-export const UpdateProveedorRequest = async(idProv,proveedor)=>{
-    return await axios.put(`http://localhost:4000/prov/${idProv}`,proveedor)
+export const GetEmpleadoRequest = async (idEmp) => {
+    return await axios.get(`http://localhost:4000/prov/${idEmp}`)
 }
 
-export const DeleteProveedorRequest = async(idProv)=>{
-    return await axios.delete(`http://localhost:4000/${idProv}`)
+export const UpdateEmpleadoRequest = async (idEmp, newFields) =>{
+    return await axios.put(`http://localhost:4000/prov/${idEmp}`, newFields)
+}
+
+export const ToggleEmpleadoStatusRequest = async (idEmp, status) =>{
+    return await axios.put(`http://localhost:4000/empleado/${idEmp}`, status)
 }

@@ -10,9 +10,7 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'OBRAS', href: '/obras', current: true, subpage:{status:true,subname:"Agregar obra"} },
-  { name: 'Materiales', href: '/materiales', current: false },
-  { name: 'Empleados', href: '/empleados', current: false }
+  { name: 'Proveedores', href: '/proveedores', current: false }
 ]
 const userNavigation = [
   { name: 'Mi perfil', href: '#' },
