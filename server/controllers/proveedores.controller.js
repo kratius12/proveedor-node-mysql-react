@@ -54,7 +54,7 @@ router.delete('/prov/:idProv', async (req, res) => {
 
 
 
-router.post('/prov',async(req,res)=>{
+router.post('/newprov',async(req,res)=>{
     try {
         const newProv = await prisma.proveedor.create({
             data: req.body

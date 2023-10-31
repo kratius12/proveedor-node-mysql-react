@@ -1,11 +1,11 @@
 
 import { useNavigate } from "react-router-dom";
-import { Card, Typography } from "@material-tailwind/react";
+import { Typography } from "@material-tailwind/react";
 
 const TABLE_HEAD = ["Nombre", "Dirección", "Nit", "Tipo", "Estado", "Email", "Telefono", "Accion"];
 
 
-export default function EmpleadoTable({ empleados }) {
+export default function ProveedoresTable({ proveedores }) {
   const navigate = useNavigate()
   return (
     <div>
@@ -29,8 +29,8 @@ export default function EmpleadoTable({ empleados }) {
           </tr>
         </thead>
         <tbody>
-          {empleados.map(({ idProv, nombre, direccion, nit, tipo,  estado,  email, telefono }, index) => {
-            const isLast = index === empleados.length - 1;
+          {proveedores.map(({ idProv, nombre, direccion, nit, tipo,  estado,  email, telefono }, index) => {
+            const isLast = index === proveedores.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
 
             return (

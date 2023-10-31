@@ -1,21 +1,21 @@
 import { Route, Routes } from "react-router-dom";
-import EmpleadosPage from "./pages/ProveedoresPage";
-import EmpleadosForm from "./pages/ProveedoresForm";
+import ProveedoresPage from "./pages/ProveedoresPage";
+import ProveedoresForm from "./pages/ProveedoresForm";
 import Header from "./components/Header";
-import { EmpleadoContextProvider } from "./context/ProveedoresProvider";
+import { ProveedorContextProvider } from "./context/ProveedorProvider";
 function App() {
   return (
     <div className="">
       <Header/>
       {/* <Navbar /> */}
       <div className="container mx-auto py-4 px20">
-        <EmpleadoContextProvider>
+        <ProveedorContextProvider>
           <Routes>
-            <Route path="/proveedor" element={<EmpleadosPage/>} />
-            <Route path="/agregarProveedor" element={<EmpleadosForm/>} />
-            <Route path="/editarProveedor/:id" element={<EmpleadosForm/>} />
+            <Route path="/proveedor" element={<ProveedoresPage/>} />
+            <Route path="/agregarProveedor" element={<ProveedoresForm/>} />
+            <Route path="/editarProveedor/:id" element={<ProveedoresForm/>} />
           </Routes>
-        </EmpleadoContextProvider>
+        </ProveedorContextProvider>
       </div>
     </div>
   )
